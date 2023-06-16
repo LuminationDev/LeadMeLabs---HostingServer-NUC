@@ -17,7 +17,7 @@ experiencing downtime. Additionally, this setup provides the following advantage
 - the infrastructure without disrupting the overall system functionality.
 
 ### Usage Instructions
-To utilize the LeadMe Labs Station Hosting Server effectively, follow these steps:
+To utilize the LeadMe Labs NUC Hosting Server effectively, follow these steps:
 
 Make sure you have the necessary access credentials and permissions to interact with the Redirect server.
 Use the appropriate URL call to the Redirect server, providing the required parameters or data for the LeadMe Labs 
