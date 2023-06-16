@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-export function version(req, res, fileName) {
+function version(req, res, fileName) {
     const file = __dirname + `../Versions/${fileName}.txt`; // Replace with the actual path to your Version.txt file
 
     try {
@@ -13,7 +13,9 @@ export function version(req, res, fileName) {
 }
 
 //Get the base URL of the current hosting site and return the program route (the queried minus the version string)
-export function baseURL(req) {
+function baseURL(req) {
     let fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     return fullUrl.replace("-version", "");
 }
+
+module.exports = version;
