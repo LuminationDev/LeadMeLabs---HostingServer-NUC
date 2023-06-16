@@ -1,14 +1,15 @@
-const helpers = require("../Utilities/helpers");
+const version = require("../Utilities/helpers");
 
 module.exports = (app) => {
     //Hosting the station
     app.get('/program-nuc-version', (req, res) => {
-        console.log("Serving station version");
-        helpers.version(req, res, "NUC_Version");
+        console.log("Serving Nuc version");
+        version(req, res, "NUC_Version");
     });
 
-    app.get('/program-station', (req, res) => {
-        var file = __dirname + '/Applications/NUC.zip';
+    app.get('/program-nuc', (req, res) => {
+        const file = __dirname + '/Applications/NUC.zip';
+        console.log("Serving nuc file");
         res.download(file);
     });
 };

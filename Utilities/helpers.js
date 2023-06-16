@@ -1,7 +1,8 @@
 const fs = require("fs");
+const path = require("path");
 
 function version(req, res, fileName) {
-    const file = __dirname + `../Versions/${fileName}.txt`; // Replace with the actual path to your Version.txt file
+    const file = path.join(__dirname, `../Versions/${fileName}.txt`); // Replace with the actual path to your Version.txt file
 
     try {
         const data = fs.readFileSync(file, 'utf8');
